@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import './utilities/variables.scss';
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+    .App{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+        .container{
+            width: 700px;
+            header{
+               width: 700px;
+                nav{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin:0 0 0.6rem 0;
+                  .darkmode{
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      margin: 0 2rem 0 0;
+                      height: 20px;
+                      width: 50px;
+                      button{
+                          outline: none;
+                          text-decoration: none;
+                          background-color: transparent;
+                          border: none;
+                          width: 100px;
+                          .switch-light,
+                          .switch-dark{
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              font-weight: 700;
+                                span{
+                                  margin: 0 0.9rem;
+                                  font-size: 0.8rem;
+                                  cursor: pointer;
+                                  text-transform: uppercase;
+                                }
+                                .hidden{
+                                  display: none;
+                                }
+                                svg{
+                                  cursor: pointer;
+                                }
+                                span:hover, svg:hover{
+                                  color: $font;
+                                }
+                           }
+                        }
+                    }
+                }
+                .search-bar{
+                  margin: 0 0 1.5rem 0;
+                  border-radius: 0.7rem;
+                  height: 3.5rem;
+                  display: flex;
+                  form{
+                    display: flex;
+                     flex-direction: row;
+                      width: 100%;
+                      .icon{
+                          margin: auto 0 auto 0.4rem;    
+                          svg{
+                            color: $blue;
+                            height: 25px;
+                            width: 100%;
+                            cursor: pointer;
+                            margin: auto 0 auto 0.5rem ;
+                          }
+                      }
+                      input{
+                        height: 25px;
+                        width: 50%;
+                        background-color: transparent;
+                        border: none;
+                        height: 80%;
+                        padding:0 0 0 1rem;
+                        margin: auto 0 auto 0.4rem;
+                        font-size: 1.1rem;
+                        outline: none;
+                      }       
+                      .userNotFound{
+                        color: red;
+                        font-weight: bold;
+                        display: inline-block;
+                        margin: auto 0;
+                      }
+                      button{
+                        background: $blue;
+                        color: $white;
+                        outline: none;
+                        text-decoration: none;
+                        padding: 0.7rem  1.1rem;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 15px;
+                        font-size: 1rem;
+                        height: 40px;
+                        margin: auto 10px auto auto ;
+                      
+                      }
+                }
+              }
+            }
+            main{
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 0.7rem;
+                .tablet{
+                  display: none;
+                }
+                .desktop{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 0.7rem;
+                    .picture-profile{
+                      margin: 3rem 0 0 2.5rem;
+                        img{
+                          height: 120px;
+                          width: 120px;
+                          object-fit: cover;
+                          border-radius: 100%;
+                        }
+                    }  
+                    .container-left{
+                      margin: 0 0 0 1rem;
+                      padding: 0 2rem 0 1rem;
+                      .info-user{
+                          .name-date{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 4rem 0 0.2rem 0;
+                              .name{
+                                font-size: 1.1rem;
+                                margin: 0;
+                              }
+                              .date-joined{
+                                margin: 0 ;
+                                font-size: 0.8rem;
+                              }
+
+                          }
+                          span.username{
+                            font-size: 0.8rem;
+                            margin: 1rem 0 0 0;
+                              a{
+                                text-decoration: none;
+                                color: $blue;
+                                cursor: pointer; 
+                              }
+                          }
+                       }
+                       .bio{
+                            h3{
+                              font-size: 0.9rem;
+                              font-weight:500!important;
+                            }
+                       }
+                       .details{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                            border-radius: 0.7rem;
+                            width: 100%;
+                            height: 80px;
+                            margin: 1.2rem 0;
+                            h4{
+                              margin: 0.5rem 0 0 0;
+                              font-weight: 500;
+                              font-size: 0.8rem;
+                            }
+                            p{
+                              margin: 0.1rem 0 0.5rem 0.2rem;
+                              font-weight: bold;
+                              font-size: 1.3rem;
+                            }
+
+                        }
+                        .container-links{
+                           display: flex;
+                           flex-direction: row;
+                           align-items: center;
+                           margin: 0 0 3rem 0;
+                           width: 490px;
+                           height: 90px;
+                           .links{
+                             margin: 0 1rem;
+                             .link-country, .link-website, .twitter-account,.link-building{
+                               width: auto;
+                               margin: 0 0 0.7rem 0;
+                               display: flex;
+                               align-items: center;
+                                          .not-available{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 100%!important;
+                                            margin: 0;
+                                            a{
+                                                margin: 0 0 0 0.4rem;
+                                              }
+                                          }
+                                          svg{
+                                              height: 19px;
+                                              margin: auto 0;
+                                          }
+                                          a{
+                                              font-size: 0.8rem;
+                                              display: inline-block;
+                                              text-decoration: none;
+                                              cursor: pointer;
+                                              margin: 0 0 0.1rem 0.6rem;
+                                          }
+                                    }
+
+                              }
+                        }
+                    }  
+                } 
+                .loading{
+                  width: 700px;
+                  height: 370px;
+                  border-radius: 0.7rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                    iframe{
+                      border: none;
+                    }
+                    span{
+                      margin: 0 0.5rem;
+                    }
+
+                }  
+              }    
+            }
+    }
+}
+
+// Tablet Version
+@media (max-width: 850px) {
+  body{
+      .App{
+        flex-direction: column;
+            .container{
+              width: 550px;
+              header{
+                 width: 550px;
+                nav{
+                  margin:2rem 0 0.6rem 0;   
+                }
+              }    
+              main{
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 0.7rem;
+                .desktop{
+                  display: none;
+                }
+                .tablet{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 0.7rem;
+                  margin: 0 0 2rem 0;
+                  .container-left{  
+                          padding: 0;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          .info-user{
+                              display: flex;
+                              align-items: start;
+                              flex-direction: row;
+                              justify-content: start;
+                              margin: 0 auto 1rem 3rem;
+                              .picture-profile{
+                                margin: 3rem 2rem 0 0;
+                                  img{
+                                    height: 100px;
+                                    width: 100px;
+                                    object-fit: cover;
+                                    border-radius: 100%;
+                                  }
+                              }  
+                              .name-date{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: start;
+                                justify-content: space-between;
+                                margin: 3.9rem 0 0.2rem 0;
+                                  .name{
+                                    font-size: 1.1rem;
+                                    margin: 0 0 0.2rem 0;
+                                  }
+                                  .date-joined{
+                                    margin: 0.2rem 0 0 0;
+                                    font-size: 0.8rem;
+                                  }
+    
+                              }
+                              span.username{
+                                font-size: 0.8rem;
+                                margin:  0;
+                                  a{
+                                    text-decoration: none;
+                                    color: $blue; 
+                                  }
+                              }
+                           }
+                           .bio{
+                              width: 90%;
+                              margin: auto 0;
+                              h3{
+                                  padding: 0 0.7rem;
+                                  font-size: 0.9rem;
+                                  font-weight:500!important;
+                                }
+                           }
+                           .details{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                align-items: center;
+                                border-radius: 0.7rem;
+                                width: 90%;
+                                height: 80px;
+                                margin: 1.2rem auto;
+                                h4{
+                                  margin: 0.5rem 0 0 0;
+                                  font-weight: 500;
+                                  font-size: 0.8rem;
+                                }
+                                p{
+                                  margin: 0.1rem 0 0.5rem 0.2rem;
+                                  font-weight: bold;
+                                  font-size: 1.3rem;
+                                }
+    
+                            }
+                            .container-links{
+                               display: flex;
+                               flex-direction: row;
+                               align-items: center;
+                               margin: 0 0 2rem  1rem;
+                               width: 490px;
+                               height: 90px;
+                               .links{
+                                 margin: 0 1rem;
+                                 .link-country, .link-website, .twitter-account,.link-building{
+                                      width: 100%;
+                                      margin: 0 0 0.7rem 0;
+                                      display: flex;
+                                      align-items: center;
+                                              .not-available{
+                                                display: flex;
+                                                align-items: center;
+                                                width: 100%!important;
+                                                margin: 0;
+                                                  a{
+                                                    margin: 0 0 0 0.4rem;
+                                                  }
+                                              }
+                                              svg{
+                                                  height: 19px;
+                                                  margin: auto 0;
+                                              }
+                                              a{
+                                                  font-size: 0.8rem;
+                                                  display: inline-block;
+                                                  text-decoration: none;
+                                                  margin: 0 0 0.1rem 0.6rem;
+                                              }
+                                        }
+    
+                                  }
+                             }                  
+                        } 
+                    }
+                    .loading{
+                      width: 550px;
+                    }
+                }
+          }    
+      }
+  }
+}  
+// Mobile Version
+@media (max-width: 600px) {
+  body{
+    .App{
+          .container{
+             width: 320px;
+                header{
+                    width: 320px;
+                        .search-bar{
+                            form{
+                                input{
+                                  font-size: 0.8rem;
+                                }
+                                .userNotFound{
+                                  font-size: 0.8rem;
+                                  margin: auto 0.1rem;
+                                }
+                            }
+                        }
+                  
+              }
+              main{
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 0.7rem;
+                  .desktop{
+                    display: none;
+                  }
+                 .tablet{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 0.7rem;
+                    .container-left{
+                      margin: 0 0 0 1rem;
+                      padding: 0 2rem 0 1rem;
+                      width: 320px;
+                         .info-user{
+                              margin: 0;
+                                  .picture-profile{
+                                    margin: 3rem 1rem 0 0.5rem;
+                                      img{
+                                        height: 70px;
+                                        width: 70px;
+                                      }
+                                  }  
+                                  .name-date{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: start;
+                                    justify-content: space-between;
+                                    margin: 3.5rem 0 0.2rem 0;
+                                      .name{
+                                        font-size: 0.9rem;
+                                        margin: 0;
+                                      }
+                                      .date-joined{
+                                        margin: 0 ;
+                                        font-size: 0.7rem;
+                                      }
+
+                                  }
+                                  span.username{
+                                    font-size: 0.7rem;
+                                    margin: 0.2rem 0;
+                                      a{
+                                        text-decoration: none;
+                                        color: $blue; 
+                                      }
+                                  }
+                              }
+                              .bio{
+                                    h3{
+                                      font-size: 0.8rem;
+                                      font-weight:500!important;
+                                    }
+                              }
+                              .details{
+                                    width: 90%;
+                                    margin:0.5rem 0 1rem 0;
+                                    h4{
+                                      font-size: 0.7rem;
+                                    }
+                                    p{
+                                      font-size: 1.1rem;
+                                    }
+
+                                }
+                              .container-links{
+                                flex-direction: column;
+                                align-items: start;
+                                width: 320px;
+                                height: 100px;
+                                padding: 0 0 1.5rem 0;
+                                .links{
+                                  margin: 0 0.9rem;
+                                    }
+                              }
+                        }
+                  }
+                  .loading{
+                    width: 320px;
+                    text-align: center;
+                      span{
+                        margin: 0 0.5rem;
+                        font-size: 0.9rem;
+                      }
+                  }
+                }   
+          } 
+    }      
+  }
+}
+
+
+
+
+
+
