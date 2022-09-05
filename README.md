@@ -15,7 +15,7 @@ challenges help you improveyour coding skills by building realistic projects.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/EliaTG/Github-search-app/blob/master/preview.jpg)
 
 
 ## Run Locally
